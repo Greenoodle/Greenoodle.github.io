@@ -6,12 +6,6 @@
     --clr-blue-shaded: #a2d2ff;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -26,20 +20,46 @@ body {
     height: 100vh;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
+.wrapper {
     width: 100vw;
-    height: 96vh;
-    margin: 0;
+    height: 100vh;
+    display: flex;
     background-color: var(--clr-blue);
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+
 }
 
-.container-2 {
-    width: 20vw;
-    height: 50px;
+.button {
+    margin-top: 15vh;
+    border: none;
+    padding: 1em;
+    width: 300px;
+    height: 300px;
+    background-color: var(--clr-pink);
+    font-family: "Audiowide", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    border-radius: 125px;
+    transition-duration: 0.4s;
+    box-shadow: 5px 10px var(--clr-blue-shaded);
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.button:active {
+    box-shadow: 0 5px var(--clr-blue-shaded);
+    transform: translateY(5px);
+}
+
+.item {
+    margin-top: 10vh;
+    width: 50vw;
+    height: 25px;
     background-color: transparent;
     border: 2px solid white;
     color: white;
@@ -47,63 +67,13 @@ body {
     padding: 10px;
     border-radius: 50px;
 
-
-}
-
-.button-container {
-    display: flex;
-    width: 90%;
-    height: 50%;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
 }
 
 .bottom {
-    height: 4vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    margin-top: auto;
 }
-
-
-.item {
-    display: flex;
-    width: 300px;
-    height: 300px;
-    background-color: var(--clr-pink);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 125px;
-    transition-duration: 0.4s;
-    box-shadow: 5px 10px var(--clr-blue-shaded);
-}
-
-.button {
-    line-height: 1.6;
-    word-spacing: 1.4px;
-    border: none;
-    padding: 1em;
-    width: 300px;
-    height: 300px;
-    background-color: transparent;
-    font-family: "Audiowide", sans-serif;
-    font-size: 16px;
-    color: white;
-    font-weight: 700;
-    border-radius: 125px;
-}
-
-.item:hover {
-    background-color: transparent;
-    border: 2px solid white;
-}
-
-.item:active {
-    box-shadow: 0 5px var(--clr-blue-shaded);
-    transform: translateY(5px);
-}
-
-
-
