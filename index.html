@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="other.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
-        <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width; initial-scale=1;">
         <title>
             Random Number Generator
         </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|JetBrains+Mono">
     </head>
     <body>
         <div class = "wrapper">
                 <button id="btn" class = "button" type="button">
-                    <span>Roll Here!</span>
+                    <span class = "span">ROLL HERE!</span>
                 </button>                
             <div id = "number" class = "item">
                 Click the Button Above to Roll the Dice!
@@ -22,6 +22,16 @@
             </div>
         </div>
 
-        <script src = "dacode.js"></script>
+        <script src = "textscramble.js"></script>
+        <script>
+            const mybtn = document.getElementById("btn");
+            const number = document.getElementById("number");
+
+            mybtn.addEventListener("click", function(e) {
+                let x = Math.ceil(Math.random() * 6);
+                number.style.width = "3%";
+                number.innerHTML = x;
+            });
+        </script>
     </body>
 </html>
